@@ -30,15 +30,32 @@
     }
 
     .lnav {
-      width: 6vw;
+      width: 8vw;
       min-height: 100vh;
       background-color: black;
-      /* border-right: 2px solid white; */
+      background: linear-gradient(to right, rgba(0, 0, 0, 0.912), rgba(0, 0, 0, 0.912),rgba(0, 0, 0, 0.912),transparent);
       position: fixed;
       top: 0;
       left: 0;
+      z-index: 40;
     }
-
+    .di{
+      display: flex;
+      padding-left: 10px;
+      margin-bottom: 5px;
+      cursor: pointer;
+    }
+    .ip{
+          padding-top: 25px;
+          margin: 0 10px ;
+          opacity: 0;
+          transition: 0.4s all ease;
+    }
+    .icons:hover{
+      .ip{
+        opacity: 1;
+      }
+    }
     .nimg {
       width: 60%;
       margin-left: 15px;
@@ -48,11 +65,13 @@
 
     .icons {
       color: rgba(255, 255, 255, 0.719);
+      /* margin-top: 10px; */
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: start;
       justify-content: center;
       margin-top: 80px;
+      font-size: 18px;
     }
 
     .icons i {
@@ -60,13 +79,13 @@
       text-shadow: 0 0 10px black;
       cursor: pointer;
     }
-
+    
     .ic1 {
       color: white;
     }
 
     .ic2 {
-      background-color: #009FFF;
+      color: #009FFF;
       border-radius: 50px;
     }
 
@@ -98,6 +117,8 @@
       box-shadow: inset 50px 10px 10px black;
       position: relative;
       cursor: pointer;
+      background: linear-gradient(to right, transparent, transparent,transparent, rgba(0, 0, 0, 0.912), rgba(0, 0, 0, 0.912),rgba(0, 0, 0, 0.912));
+
     }
 
     .s1img::after {
@@ -253,14 +274,38 @@
       <img src="https://img.hotstar.com/image/upload/v1737554969/web-assets/prod/images/rebrand/logo.png" class="nimg"
         alt="">
       <div class="icons">
-        <i class="ic ic1 fa-solid fa-house"></i>
+        <div class="di">
+          <i class="ic ic1 fa-solid fa-house"></i>
+          <p class="ip">Home</p>
+        </div>
+       <div class="di">
         <i class="ic fa-solid fa-magnifying-glass"></i>
-        <i class="ic fa-solid fa-tv"></i>
-        <i class="ic fa-regular fa-chess-queen"></i>
-        <i class="ic fa-solid fa-person-running"></i>
-        <i class="ic fa-solid fa-video"></i>
-        <i class="ic fa-solid fa-table"></i>
-        <i class="ic ic2 fa-regular fa-face-smile"></i>
+        <p class="ip">Search</p>
+       </div>
+        <div class="di">
+          <i class="ic fa-solid fa-tv"></i>
+          <p class="ip">TV</p>
+        </div>
+        <div class="di">
+          <i class="ic fa-regular fa-chess-queen"></i>
+          <p class="ip">Movies</p>
+        </div>
+        <div class="di">
+          <i class="ic fa-solid fa-person-running"></i>
+          <p class="ip">Sports</p>
+        </div>
+        <div class="di">
+          <i class="ic fa-solid fa-video"></i>
+          <p class="ip">Sparks</p>
+        </div>
+        <div class="di">
+          <i class="ic fa-solid fa-table"></i>
+          <p class="ip">Categories</p>
+        </div>
+        <div class="di">
+          <i class="ic ic2 fa-regular fa-face-smile"></i>
+          <p class="ip">MySpace</p>
+        </div>
       </div>
     </div>
     <div class="main">
